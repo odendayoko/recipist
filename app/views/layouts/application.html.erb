@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Recipist</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+     <header class="header">
+      <div class="header__bar row">
+        <h1 class="header-logo"><a href="/">Recipist</a></h1>
+          <% if user_signed_in? %>
+            <div class="user_nav grid-6">
+             <header-button>
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+              <%= link_to "投稿する", new_menu_path, class: "post" %>
+            </div>
+          <% else %>
+            <div class="grid-6">
+              <%= link_to "ログイン", new_user_session_path, class: "post" %>
+              <%= link_to "新規登録", new_user_registration_path, class: "post" %>
+            </div>
+          <% end %>       
+      </div>
+    </header>
+    <%= yield %>
+    <footer>
+      <p>
+        Copyright Recipist 2023.
+      </p>
+    </footer>
+  </body>
+</html>

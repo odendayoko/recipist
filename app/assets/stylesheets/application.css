@@ -1,0 +1,140 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* ヘッダーのスタイル */
+.header {
+  background-color: #ffcc00;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+
+/* サービス名 */
+.header-logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px #444;
+  margin-right: 32px;
+}
+
+/* ナビゲーション */
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+/* ログイン・新規登録ボタン */
+.header-button {
+  background-color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffcc00;
+  border-radius: 4px;
+  margin-left: 16px;
+}
+
+/* メインコンテンツのスタイル */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+/* レシピのスタイル */
+.recipe {
+   display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border: 2px solid #f9d3a5;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.recipe-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.recipe-name {
+font-size: 24px;
+  color: #f9a602;
+  margin: 0;
+}
+
+/* 検索フォームのスタイル */
+.search-form {
+  background-color: #ffcc00;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  margin-bottom: 32px;
+}
+
+.search-form-input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  font-size: 16px;
+  padding: 4px;
+  margin-right: 8px;
+  width: 70%;
+}
+
+.search-form-button {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+@media (max-width: 767px) {
+  /* ヘッダーのスタイル */
+  .header {
+    flex-direction: column;
+  }
+
+  .header-logo {
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+
+  .header-nav {
+    margin-top: 16px;
+  }
+
+ 

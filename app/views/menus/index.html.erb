@@ -1,0 +1,18 @@
+<div class="user_nav grid-6">
+  <a class="post" href="/menus/new">レシピを追加する</a>
+</div>
+
+
+<div class="recipe-list">
+  <div class="recipe">
+    <% @menus.each do |menu| %>
+    <ul class="more_list">
+      <li>
+        <%= link_to '詳細', menu_path(menu.id), method: :get %>
+      </li>
+    </ul>
+      <%= menu.name%>
+      <%= image_tag menu.image.variant(resize: '100x100') if menu.image.attached? %>
+  </div>
+</div>
+<% end %>
