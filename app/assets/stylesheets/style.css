@@ -1,0 +1,175 @@
+
+
+ * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* ヘッダーのスタイル */
+.header {
+  background-color: #ffcc00;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+
+/* サービス名 */
+.header-logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px #444;
+  margin-right: 32px;
+}
+
+/* ナビゲーション */
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+/* ログイン・新規登録ボタン */
+.header-button {
+  background-color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffcc00;
+  border-radius: 4px;
+  margin-left: 16px;
+}
+
+/* メインコンテンツのスタイル */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+/* レシピのスタイル */
+.recipe {
+   display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border: 2px solid #f9d3a5;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.recipe-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.recipe-name {
+font-size: 24px;
+  color: #f9a602;
+  margin: 0;
+}
+
+/* 検索フォームのスタイル */
+.search-form {
+  background-color: #ffcc00;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  margin-bottom: 32px;
+}
+
+.search-form-input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  font-size: 16px;
+  padding: 4px;
+  margin-right: 8px;
+  width: 70%;
+}
+
+.search-form-button {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+
+  /* ヘッダーのスタイル */
+  .header {
+    flex-direction: column;
+  }
+
+  .header-logo {
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+
+  .header-nav {
+    margin-top: 16px;
+  }
+
+  .container {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .field {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  input[type="email"],
+  input[type="password"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+  
+  .actions {
+    text-align: center;
+  }
+  
+  input[type="submit"] {
+    background-color: #fc3;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
