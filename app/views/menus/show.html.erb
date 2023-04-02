@@ -9,4 +9,4 @@
 
 <%= @menu.url %>
 <%= @menu.memo %>
-<%= @menu.image%>
+<%= image_tag @menu.image if @menu.image.attached? %>
