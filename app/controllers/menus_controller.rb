@@ -10,7 +10,6 @@ class MenusController < ApplicationController
   end
 
   def create
-    binding.pry
     Menu.create(menu_params)
     redirect_to root_path
   end
