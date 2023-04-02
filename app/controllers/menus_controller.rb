@@ -2,7 +2,7 @@ class MenusController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
   
   def index
-    @menus = Menu.all
+    @menus = Menu.includes(:user).order("created_at DESC")
   end
 
   def new
@@ -10,6 +10,7 @@ class MenusController < ApplicationController
   end
 
   def create
+    binding.pry
     Menu.create(menu_params)
     redirect_to root_path
   end
@@ -36,7 +37,7 @@ class MenusController < ApplicationController
 
   private
   def menu_params
-    params.require(:menu).permit(:name, :url, :memo, :image)
+    params.require(:menu).permit(:name, :url, :memo, :image).merge(user_id: current_user.id)
   end
 
   def move_to_index

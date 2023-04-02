@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: recipist_production
+  adapter: postgresql
   username: recipist
   password: <%= ENV['RECIPIST_DATABASE_PASSWORD'] %>

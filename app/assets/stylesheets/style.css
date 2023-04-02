@@ -55,25 +55,48 @@ body {
 
 /* レシピのスタイル */
 .recipe {
-   display: flex;
+  /* display: flex;
   align-items: center;
   margin-bottom: 20px;
   border: 2px solid #f9d3a5;
   border-radius: 10px;
-  padding: 10px;
+  padding: 10px; */
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 16px;
 }
 
 .recipe-image {
-  width: 200px;
+  /* width: 200px;
   height: 200px;
   object-fit: cover;
-  margin-right: 20px;
+  margin-right: 20px; */
+  width: 100%;
+  height: auto;
+  margin-bottom: 16px;
+}
+
+.recipe-image img {
+  width: 100%;
+  height: auto;
 }
 
 .recipe-name {
-font-size: 24px;
+/* font-size: 24px;
   color: #f9a602;
-  margin: 0;
+  margin: 0; */
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.recipe-url {
+  font-size: 14px;
+  color: blue;
 }
 
 /* 検索フォームのスタイル */

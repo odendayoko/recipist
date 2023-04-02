@@ -4,15 +4,19 @@
 
 
 <div class="recipe-list">
-  <div class="recipe">
-    <% @menus.each do |menu| %>
-    <ul class="more_list">
-      <li>
-        <%= link_to '詳細', menu_path(menu.id), method: :get %>
-      </li>
-    </ul>
-      <%= menu.name%>
-      <%= image_tag menu.image.variant(resize: '100x100') if menu.image.attached? %>
-  </div>
+  <% @menus.each do |menu| %>
+    <div class="recipe">
+      <div class="recipe-image">
+        <%= link_to menu_path(menu.id) do %>
+          <%= image_tag menu.image if menu.image.attached? %>
+        <% end %>
+      </div>
+      <div class="recipe-name">
+        <%= link_to "#{menu.name}" , menu_path(menu.id)%>
+      </div>
+      <div class="recipe-url">
+        <%= link_to "レシピのURL: #{menu.url}", menu.url, target: "_blank"%>
+      </div>
+    </div>
+  <% end %>
 </div>
-<% end %>
