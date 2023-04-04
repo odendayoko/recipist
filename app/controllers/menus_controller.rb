@@ -1,5 +1,5 @@
 class MenusController < ApplicationController
-  before_action :move_to_index, except: [:index, :show]
+  before_action :move_to_index, except: [:index, :show, :search]
   
   def index
     @menus = Menu.includes(:user).order("created_at DESC")
@@ -32,6 +32,10 @@ class MenusController < ApplicationController
 
   def show
     @menu = Menu.find(params[:id])
+  end
+
+  def search
+    @menus = Menu.search(params[:keyword])
   end
 
   private

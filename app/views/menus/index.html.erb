@@ -2,6 +2,12 @@
   <a class="post" href="/menus/new">レシピを追加する</a>
 </div>
 
+<div class="search-form">
+  <%= form_with(url: search_menus_path, local: true, method: :get, class: "search-form") do |form| %>
+    <%= form.text_field :keyword, placeholder: "レシピ名", class: "search-input" %>
+    <%= form.submit "検索", class: "search-btn" %>
+  <% end %>
+</div>
 
 <div class="recipe-list">
   <% @menus.each do |menu| %>
