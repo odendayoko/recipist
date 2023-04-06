@@ -198,3 +198,15 @@ body {
     border-radius: 5px;
     cursor: pointer;
   }
+
+  
+/* スマホ表示時 */
+@media (max-width: 500px) {
+  .user_nav {
+    font-size: 14px;
+  }
+
+  .recipe-heading{
+    margin: 8px 0;
+  }
+}

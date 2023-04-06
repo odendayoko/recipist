@@ -1,12 +1,18 @@
-<h3><%= @menu.name %>の詳細情報</h3>
 
-  <li>
+
+<h3 class="recipe-heading"><%= @menu.name %>の詳細情報</h3>
+
+<% if @menu.user.id == current_user.id %>
+  <div>
     <%= link_to '編集', edit_menu_path(@menu.id), method: :get %>
-  </li>
-  <li>
-    <%= link_to '戻る', root_path, method: :get %>
-  </li>
+  </div>
+<% end %>
+<div>
+  <%= link_to '戻る', root_path, method: :get %>
+</div>
 
-<%= @menu.url %>
+<%= link_to @menu.url %>
 <%= @menu.memo %>
-<%= image_tag @menu.image if @menu.image.attached? %>
+<div class="recipe-image">
+  <%= image_tag @menu.image if @menu.image.attached? %>
+</div>
