@@ -1,6 +1,17 @@
 <div class="contents row">
   <div class="container">
     <h3>レシピを追加する</h3>
+
+      <% if @menu.errors.any? %>
+        <div id="error_explanation">
+          <ul>
+            <% @menu.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      
     <%= form_with(model: @menu, local: true) do |form| %>
       <%= form.text_field :name, placeholder: "料理名" %>
       <%= form.text_field :url, placeholder: "URL" %>

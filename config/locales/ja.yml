@@ -1,0 +1,6 @@
+ja:
+  activerecord:
+    attributes:
+      menu:
+        name: レシピ名
+        url: URL

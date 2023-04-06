@@ -11,8 +11,12 @@ class MenusController < ApplicationController
   end
 
   def create
-    Menu.create(menu_params)
-    redirect_to root_path
+    @menu = Menu.new(menu_params)
+      if @menu.save
+        redirect_to root_path
+      else
+        render :new
+      end
   end
 
   def destroy

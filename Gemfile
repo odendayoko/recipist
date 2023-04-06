@@ -62,3 +62,5 @@ gem "aws-sdk-s3", require: false
 group :production do
   gem 'pg'
 end
+
+gem 'rails-i18n'
