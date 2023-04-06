@@ -3,7 +3,8 @@ class MenusController < ApplicationController
   before_action :move_to_index, except: [:index, :show, :search]
   
   def index
-    @menus = Menu.includes(:user).order("created_at DESC")
+    @menus = current_user.menus.order("created_at DESC")
+    # @menus = Menu.where(user_id: current_user.id)
   end
 
   def new
