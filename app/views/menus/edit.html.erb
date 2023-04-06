@@ -3,7 +3,7 @@
     <h3>編集する</h3>
     <%= form_with(model: @menu, local: true) do |form| %>
       <%= form.text_field :name, placeholder: "料理名" %>
-      <%= form.text_field :image, placeholder: "URL" %>
+      <%= form.text_field :url, placeholder: "URL" %>
       <%= form.text_field :memo, placeholder: "メモ" %>
       <%= form.file_field :image  %>
       <%= form.submit "保存" %>
