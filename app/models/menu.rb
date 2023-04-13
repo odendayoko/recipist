@@ -3,6 +3,7 @@ class Menu < ApplicationRecord
   validates :url, presence: true
   belongs_to :user
   has_one_attached :image
+  has_many :favorites, dependent: :destroy
 
   def self.search(search)
     if search != ""

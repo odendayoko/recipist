@@ -10,12 +10,17 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* ヘッダーのスタイル */
 .header {
-  background-color: #ffcc00;
+  /* background-color: #ffcc00; */
+  color: #fff;
+}
+
+.header-top {
+  background-color:#f9d751;
   color: #fff;
   display: flex;
   padding: 16px;
+  flex-direction: column;
 }
 
 .header__bar {
@@ -23,16 +28,54 @@ body {
   justify-content: space-between;
 }
 
-/* サービス名 */
 .header-logo {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: bold;
+  margin-right: 0;
+  margin-bottom: 16px;
 }
+
+.header-logo a {
+  color: brown;
+}
+
+/* 検索フォームのスタイル */
+.search-form {
+  background-color:#fff;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.search-input {
+  background-color: transparent;
+  border: none;
+  border: solid 1px #e25407;
+  color: #fff;
+  font-size: 16px;
+  padding: 4px;
+  margin-right: 13px;
+  width: 50%;
+}
+
+.search-button {
+  background-color: #e25407;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
 
 /* ナビゲーション */
 .header-nav {
   display: flex;
   align-items: center;
+  margin-top: 16px;
 }
 
 /* ログイン・新規登録ボタン */
@@ -46,6 +89,7 @@ body {
   border-radius: 4px;
   margin-left: 16px;
 }
+
 
 /* メインコンテンツのスタイル */
 .container {
@@ -101,52 +145,6 @@ body {
   color: blue;
 }
 
-/* 検索フォームのスタイル */
-.search-form {
-  background-color: #ffcc00;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8px;
-  margin-bottom: 32px;
-}
-
-.search-form-input {
-  background-color: transparent;
-  border: none;
-  border-bottom: 2px solid #fff;
-  color: #fff;
-  font-size: 16px;
-  padding: 4px;
-  margin-right: 8px;
-  width: 70%;
-}
-
-.search-form-button {
-  background-color: transparent;
-  border: 2px solid #fff;
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 8px 16px;
-  border-radius: 4px;
-}
-
-
-  /* ヘッダーのスタイル */
-  .header {
-    flex-direction: column;
-  }
-
-  .header-logo {
-    margin-right: 0;
-    margin-bottom: 16px;
-  }
-
-  .header-nav {
-    margin-top: 16px;
-  }
 
   .container {
     max-width: 400px;
@@ -189,15 +187,6 @@ body {
     text-align: center;
   }
   
-  input[type="submit"] {
-    background-color: #fc3;
-    border: none;
-    color: #fff;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
 
   
 /* スマホ表示時 */

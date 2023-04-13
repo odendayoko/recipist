@@ -44,6 +44,12 @@ class MenusController < ApplicationController
     @menus = Menu.search(params[:keyword])
   end
 
+  def favorite
+    @menu = Menu.find(params[:id])
+    Favorite.create(user_id: current_user.id, menu_id: @menu.id)
+    render :show
+  end
+
   private
   def menu_params
     params.require(:menu).permit(:name, :url, :memo, :image).merge(user_id: current_user.id)

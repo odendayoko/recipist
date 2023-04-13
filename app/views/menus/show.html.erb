@@ -16,3 +16,5 @@
 <div class="recipe-image">
   <%= image_tag @menu.image if @menu.image.attached? %>
 </div>
+
+<%= link_to 'お気に入りに追加', "/menus/#{@menu.id}/favorite", method: :post %>
