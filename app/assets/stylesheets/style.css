@@ -6,6 +6,10 @@
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   font-family: Arial, sans-serif;
 }
@@ -16,7 +20,7 @@ body {
 }
 
 .header-top {
-  background-color:#f9d751;
+  background-color: #ffff9e;
   color: #fff;
   display: flex;
   padding: 16px;
@@ -36,10 +40,10 @@ body {
 }
 
 .header-logo a {
-  color: brown;
+  color: #4e3618;
 }
 
-/* 検索フォームのスタイル */
+/* 検索フォーム */
 .search-form {
   background-color:#fff;
   color: #fff;
@@ -52,22 +56,23 @@ body {
 .search-input {
   background-color: transparent;
   border: none;
-  border: solid 1px #e25407;
+  border: solid 1px #26753e;
   color: #fff;
   font-size: 16px;
   padding: 4px;
   margin-right: 13px;
   width: 50%;
+  border-radius: 4px;
 }
 
 .search-button {
-  background-color: #e25407;
+  background-color: #26753e;
   border: 2px solid #fff;
   color: #fff;
   font-size: 16px;
   font-weight: bold;
   padding: 8px 16px;
-  border-radius: 4px;
+  border-radius: 10px;
 }
 
 
@@ -117,10 +122,6 @@ body {
 }
 
 .recipe-image {
-  /* width: 200px;
-  height: 200px;
-  object-fit: cover;
-  margin-right: 20px; */
   width: 100%;
   height: auto;
   margin-bottom: 16px;
@@ -129,12 +130,10 @@ body {
 .recipe-image img {
   width: 100%;
   height: auto;
+  object-fit: contain;
 }
 
 .recipe-name {
-/* font-size: 24px;
-  color: #f9a602;
-  margin: 0; */
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 8px;
@@ -186,7 +185,52 @@ body {
   .actions {
     text-align: center;
   }
-  
+
+ /* 詳細ページ */
+  .show-hed{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    
+  }
+
+  .show-back-botton a{
+    color:#4e3618;
+  }
+  .show-back-botton{
+    border-radius: 5px; 
+    padding: 5px;
+    text-align: center;
+    border: solid 1px #4e3618;
+  }
+  .show-recipe-name {
+    color:#4e3618;
+    padding: 5px;
+  }
+
+  .show-edit-botton a{
+    color:#4e3618;
+  }
+  .show-edit-botton {
+    border-radius: 5px; 
+    padding: 5px;
+    text-align: center;
+    border: solid 1px #4e3618;
+  }
+
+
+  .show-recipe-image{
+    padding: 15px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .show-recipe-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+  }
+
 
   
 /* スマホ表示時 */
