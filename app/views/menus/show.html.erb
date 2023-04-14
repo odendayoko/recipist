@@ -1,9 +1,13 @@
+<h3 class="show-recipe-name"><%= @menu.name %>の詳細情報</h3>
+
+<div class="show-recipe-image">
+  <%= image_tag @menu.image if @menu.image.attached? %>
+</div>
+
 <div class = "show-hed">
   <div class = "show-back-botton" >
     <%= link_to '戻る', root_path, method: :get %>
   </div>
-
-  <h3 class="show-recipe-name"><%= @menu.name %>の詳細情報</h3>
 
   <% if @menu.user.id == current_user.id %>
     <div class= "show-edit-botton">
@@ -12,14 +16,12 @@
   <% end %>
 </div>
 
-<div class="show-recipe-image">
-  <%= image_tag @menu.image if @menu.image.attached? %>
+<div class = "show-recipe-url">
+ <%= link_to "レシピのURL： #{@menu.url}", @menu.url %>
 </div>
 
+<div class = "show-recipe-memo">
+ <%= "メモ：　#{@menu.memo}" %>
+</div>
 
-
-
-<%= link_to @menu.url %>
-<%= @menu.memo %>
-
-<%= link_to 'お気に入りに追加', "/menus/#{@menu.id}/favorite", method: :post %>
+<%# <%= link_to 'お気に入りに追加', "/menus/#{@menu.id}/favorite", method: :post %>
