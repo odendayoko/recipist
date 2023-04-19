@@ -24,4 +24,12 @@
  <%= "メモ：　#{@menu.memo}" %>
 </div>
 
+
+<div id="like-btn<%= @menu.id %>">
+    <% if user_signed_in? && @menu.favorited_by?(current_user)%>
+      <%=link_to "いいね済", menu_favorite_path(@menu.id),  method: :delete, class: "menu_favorites" %>
+    <% else %>
+      <%=link_to "いいねする", menu_favorite_path(@menu.id), method: :post, class: "menu_favorites" %>
+    <% end %>
+  </div>
 <%# <%= link_to 'お気に入りに追加', "/menus/#{@menu.id}/favorite", method: :post %>

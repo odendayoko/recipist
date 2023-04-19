@@ -5,8 +5,8 @@ Rails.application.routes.draw do
     collection do
       get 'search'
     end
-    # resources :favorite, only: [:create, :destroy]
+    resources :favorites, only: [:create, :destroy]
   end 
   resources :users, only: :show
-  post 'menus/:id/favorite', to: 'menus#favorite'
+ 
 end

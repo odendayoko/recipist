@@ -5,11 +5,7 @@ class Menu < ApplicationRecord
   has_one_attached :image
   has_many :favorites, dependent: :destroy
 
-  def self.search(search)
-    if search != ""
-      Menu.where('name LIKE(?)', "%#{search}%")
-    else
-      Menu.all
-    end
+  def favorited_by?(user)
+    favorites.where(user_id: user.id).exists?
   end
 end
