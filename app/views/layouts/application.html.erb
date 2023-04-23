@@ -29,12 +29,14 @@
             <% end %>       
         </div>
       </div>
-      <div class="search-top">
-       <%= form_with(url: search_menus_path, local: true, method: :get, class: "search-form") do |form| %>
-        <%= form.text_field :keyword, placeholder: "レシピ名", class: "search-input" %>
-        <%= form.submit "検索", class: "search-button" %>
-       <% end %>
-      </div>
+      <% if user_signed_in? %>
+        <div class="search-top">
+          <%= form_with(url: search_menus_path, local: true, method: :get, class: "search-form") do |form| %>
+            <%= form.text_field :word, placeholder: "レシピ名", class: "search-input" %>
+            <%= form.submit "検索", class: "search-button" %>
+          <% end %>
+        </div>
+      <% end %>
     </header>
     <%= yield %>
     <footer>

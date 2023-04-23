@@ -4,7 +4,6 @@ class MenusController < ApplicationController
   
   def index
     @menus = current_user.menus.order("created_at DESC")
-    # @menus = Menu.where(user_id: current_user.id)
   end
 
   def new
@@ -41,7 +40,10 @@ class MenusController < ApplicationController
   end
 
   def search
-    @menus = Menu.search(params[:keyword])
+    @menus = Menu.all
+    if params[:word].present?
+      @menus = Menu.where('name LIKE ?', "%#{params[:word]}%")
+    end
   end
 
   def favorite

@@ -1,15 +1,8 @@
-<%= form_with(url: search_menus_path, local: true, method: :get, class: "search-form") do |form| %>
-  <%= form.text_field :keyword, placeholder: "料理名", class: "search-input" %>
-  <%= form.submit "検索", class: "search-btn" %>
-<% end %>
-
 <% @menus.each do |menu| %>
   <div class="recipe">
    <%= link_to menu_path(menu.id) do %>
     <%= image_tag menu.image if menu.image.attached? %>
    <% end %>
-    <div class="recipe-info">
-      <h2><%= link_to menu.name, menu %></h2>
-    </div>
+
   </div>
 <% end %>
