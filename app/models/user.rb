@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :menus
   has_many :favorites, dependent: :destroy
+  has_many :favorite_menus, through: :favorites, source: :menu
 end

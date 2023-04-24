@@ -15,7 +15,6 @@ body {
 }
 
 .header {
-  /* background-color: #ffcc00; */
   color: #fff;
 }
 
@@ -104,13 +103,7 @@ body {
 }
 
 /* レシピのスタイル */
-.recipe {
-  /* display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-  border: 2px solid #f9d3a5;
-  border-radius: 10px;
-  padding: 10px; */
+.index-recipe {
   width: 50%;
   max-width: 400px;
   padding: 16px;
@@ -121,27 +114,28 @@ body {
   margin: 0 auto 16px;
 }
 
-.recipe-image {
+.index-recipe-image {
   width: 100%;
   height: auto;
   margin-bottom: 16px;
 }
 
-.recipe-image img {
+.index-recipe-image img {
   width: 100%;
   height: auto;
   object-fit: contain;
 }
 
-.recipe-name {
+.index-recipe-name {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 8px;
+  color: #4e3618;
 }
 
-.recipe-url {
+.index-recipe-url {
   font-size: 14px;
-  color: blue;
+  color:#4e3618;
 }
 
 

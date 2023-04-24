@@ -7,6 +7,9 @@ Rails.application.routes.draw do
     end
     resources :favorites, only: [:create, :destroy]
   end 
-  resources :users, only: :show
- 
+  resources :users, only: :show do
+    member do
+      get 'favorite_menus'
+    end
+  end
 end
