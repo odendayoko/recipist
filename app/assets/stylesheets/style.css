@@ -14,15 +14,10 @@ body {
   font-family: Arial, sans-serif;
 }
 
-.header {
-  color: #fff;
-}
-
 .header-top {
   background-color: #ffff9e;
-  color: #fff;
   display: flex;
-  padding: 16px;
+  padding: 20px;
   flex-direction: column;
 }
 
@@ -32,14 +27,16 @@ body {
 }
 
 .header-logo {
-  font-size: 30px;
+  font-size: 35px;
   font-weight: bold;
-  margin-right: 0;
-  margin-bottom: 16px;
 }
 
 .header-logo a {
   color: #4e3618;
+}
+
+.post {
+  color:#4e3618;
 }
 
 /* 検索フォーム */
@@ -49,7 +46,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  margin: 20px;
 }
 
 .search-input {
@@ -102,9 +99,8 @@ body {
   padding: 32px;
 }
 
-/* レシピのスタイル */
+/* トップページ */
 .index-recipe {
-  width: 50%;
   max-width: 400px;
   padding: 16px;
   box-sizing: border-box;
@@ -127,14 +123,24 @@ body {
 }
 
 .index-recipe-name {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
   margin-bottom: 8px;
-  color: #4e3618;
+  width: 300px;
+  text-align: center;
+}
+
+.index-recipe-name a {
+  color:#ea5550;
 }
 
 .index-recipe-url {
   font-size: 14px;
+  color:#4e3618;
+  text-align: center;
+}
+
+.index-recipe-url a {
   color:#4e3618;
 }
 

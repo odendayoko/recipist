@@ -1,8 +1,8 @@
 
-
+<%# 
 <div class="user_nav grid-6">
   <a class="post" href="/menus/new">レシピを追加する</a>
-</div>
+</div> %>
 
 <div class="recipe-list">
   <% @menus.each do |menu| %>
@@ -16,7 +16,7 @@
         <%= link_to "#{menu.name}" , menu_path(menu.id)%>
       </div>
       <div class="index-recipe-url">
-        <%= link_to "レシピのURL: #{menu.url}", menu.url, target: "_blank"%>
+        <%= link_to "#{menu.url}", menu.url, target: "_blank"%>
       </div>
     </div>
   <% end %>

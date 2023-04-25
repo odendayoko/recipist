@@ -17,8 +17,7 @@
             <% if user_signed_in? %>
               <div class="user_nav grid-6">
                 <%= current_user.nickname %>
-                <%= link_to "マイページ", "/users/#{current_user.id}" %>
-                <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+                <%= link_to "マイページ", "/users/#{current_user.id}",class: "post"%>
                 <%= link_to "投稿する", new_menu_path, class: "post" %>
               </div>
             <% else %>
@@ -43,6 +42,11 @@
       <p>
         Copyright Recipist 2023.
       </p>
+      <% if user_signed_in? %>
+        <div class="user_nav grid-6">
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+        </div>
+      <% end %>     
     </footer>
   </body>
 </html>
