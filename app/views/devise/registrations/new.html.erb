@@ -18,7 +18,7 @@
       <div class="field">
         <%= f.label :password, 'パスワード' %>
         <% if @minimum_password_length %>
-          <em>(最大<%= @minimum_password_length %>文字 )</em>
+          <em>(最小<%= @minimum_password_length %>文字 )</em>
         <% end %><br />
         <%= f.password_field :password, autocomplete: "off" %>
       </div>
