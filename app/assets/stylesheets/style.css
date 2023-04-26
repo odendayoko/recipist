@@ -14,6 +14,7 @@ body {
   font-family: Arial, sans-serif;
 }
 
+/* ヘッダー */
 .header-top {
   background-color: #ffff9e;
   display: flex;
@@ -51,7 +52,6 @@ body {
 
 .search-input {
   background-color: transparent;
-  border: none;
   border: solid 1px #26753e;
   color: #fff;
   font-size: 16px;
@@ -69,6 +69,7 @@ body {
   font-weight: bold;
   padding: 8px 16px;
   border-radius: 10px;
+  width: 70px;
 }
 
 
@@ -90,7 +91,6 @@ body {
   border-radius: 4px;
   margin-left: 16px;
 }
-
 
 /* メインコンテンツのスタイル */
 .container {
@@ -126,7 +126,7 @@ body {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 8px;
-  width: 300px;
+  width: 100%;
   text-align: center;
 }
 
@@ -138,28 +138,64 @@ body {
   font-size: 14px;
   color:#4e3618;
   text-align: center;
+  width: 100%;
 }
 
 .index-recipe-url a {
-  color:#4e3618;
+  color:#4e3618; 
+}
+/* 新規投稿ページ */
+.new-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.new-container h2{
+  color: #4e3618;
+  text-align: center;
+  padding-bottom: 16px;
+}
 
-  .container {
-    max-width: 400px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  }
-  
-  h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 24px;
-  }
-  
+.new-main{
+  display: flex;
+  flex-direction: column;
+}
+
+.new-title{
+  color: #4e3618;
+}
+
+.new-recipe-form{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+  font-size: 16px;
+  margin-bottom: 16px;
+  border: solid 1px #4e3618;
+  border-radius: 4px;
+}
+
+.new-submit{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0px;
+}
+.new-submit-botton {
+  background-color: #ea5550;
+  /* border: 2px solid #fff; */
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 10px;
+  width: 70px;
+}
+
   .field {
     margin-bottom: 20px;
   }
