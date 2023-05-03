@@ -1,0 +1,19 @@
+
+<div class="container">
+  <%= form_with(url: search_users_path, local: true, method: :get, class: "user-search-form") do |form| %>
+    <%= form.text_field :keyword, placeholder: "ユーザーを検索する", class: "user-search-input" %>
+    <%= form.submit "検索", class: "user-search-btn" %>
+  <% end %>
+
+  <div class="user-search-contents">
+    <% @users.each do |user| %>
+      <% if @users%>
+        <div class="user-search-user">
+            <%= link_to "#{user.nickname}", "/users/#{user.id}",class: "post"%>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+

@@ -17,7 +17,8 @@
             <% if user_signed_in? %>
               <div class="user_nav grid-6">
                 <%= current_user.nickname %>
-                <%= link_to "マイページ", "/users/#{current_user.id}",class: "post"%>
+                <%= link_to "マイページ", "/users/mypage",class: "post"%>
+                <%= link_to "ユーザーを検索する", "/users/user_search",class: "post"%>
                 <%= link_to "投稿する", new_menu_path, class: "post" %>
               </div>
             <% else %>

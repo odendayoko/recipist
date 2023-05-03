@@ -303,3 +303,9 @@ h2 {
     margin: 8px 0;
   }
 }
+
+/* ユーザーサーチページ */
+
+.user-search-user {
+  margin: 10px
+}

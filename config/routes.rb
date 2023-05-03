@@ -11,5 +11,11 @@ Rails.application.routes.draw do
     member do
       get 'favorite_menus'
     end
+    collection do
+      get 'search'
+      get 'user_search'
+      get 'mypage'
+    end
+
   end
 end
