@@ -1,5 +1,12 @@
 <div class="contents row">
   <p><%= @nickname %>のレシピ一覧</p>
+  <% if current_user != @user %>
+    <% if current_user.following?(@user) %>
+      <%= link_to 'フォロー外す', user_relationships_path(@user.id), method: :delete, class: "unfollow-botton" %>
+    <% else %>
+    <%= link_to 'フォローする', user_relationships_path(@user.id), method: :POST, class:"follow_botton" %>
+    <% end %>
+  <% end %>
 </div>
 
 <div class="recipe-list">

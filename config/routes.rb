@@ -10,12 +10,13 @@ Rails.application.routes.draw do
   resources :users, only: :show do
     member do
       get 'favorite_menus'
+      get :follows, :followers
     end
     collection do
       get 'search'
       get 'user_search'
       get 'mypage'
     end
-
+    resource :relationships, only: [:create, :destroy]
   end
 end
