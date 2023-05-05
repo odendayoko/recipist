@@ -112,10 +112,10 @@ body {
   width: 70%;
 }
 
-
 .link{
-  color: black;
+  color: #bc611e;
   margin-right: 20px;
+  font-size: 18px;
 }
 .index-recipe {
   max-width: 400px;
