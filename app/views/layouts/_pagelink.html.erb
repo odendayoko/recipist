@@ -1,0 +1,7 @@
+<div class="top-link">
+  <div class="links">
+  <%= link_to "投稿一覧", root_path,class: "link" %>
+  <%= link_to "いいね一覧", "/users/#{current_user.id}/favorite_menus",class: "link"%>
+  <%= link_to "フォローしているユーザーのレシピ一覧", "/menus/following_menus",class: "link"%>
+  </div>
+</div>
