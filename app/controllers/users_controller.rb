@@ -26,4 +26,6 @@ class UsersController < ApplicationController
       @users = nil
     end
   end
+
+  
 end

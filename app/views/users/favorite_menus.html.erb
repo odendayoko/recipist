@@ -1,11 +1,6 @@
-
-<%# 
-<div class="user_nav grid-6">
-  <a class="post" href="/menus/new">レシピを追加する</a>
-</div> %>
-
-<%= link_to "いいね一覧", "/users/#{current_user.id}/favorite_menus",class: "get"%>
-<%= link_to "フォローしているユーザーのレシピ一覧", "menus/following_menus",class: "get"%>
+<div class="contents row">
+  <p><%= current_user.nickname %>のお気に入りレシピ一覧</p>
+</div>
 
 <div class="recipe-list">
   <% @menus.each do |menu| %>
@@ -19,7 +14,7 @@
         <%= link_to "#{menu.name}" , menu_path(menu.id)%>
       </div>
       <div class="index-recipe-url">
-        <%= link_to "#{menu.url}", menu.url, target: "_blank"%>
+        <%= link_to "レシピのURL: #{menu.url}", menu.url, target: "_blank"%>
       </div>
     </div>
   <% end %>

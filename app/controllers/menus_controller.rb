@@ -52,6 +52,12 @@ class MenusController < ApplicationController
     render :show
   end
 
+
+  def following_menus
+    following_user_id = current_user.following_users.pluck(:id)
+    @menus = Menu.where(user_id: following_user_id)
+  end  
+
   private
   def menu_params
     params.require(:menu).permit(:name, :url, :memo, :image).merge(user_id: current_user.id)

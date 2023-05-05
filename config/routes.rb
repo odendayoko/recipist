@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :menus do
     collection do
       get 'search'
+      get 'following_menus'
     end
     resources :favorites, only: [:create, :destroy]
   end 
