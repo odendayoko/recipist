@@ -201,6 +201,7 @@ body {
   align-items: center;
   padding: 10px 0px;
 }
+
 .new-submit-botton {
   background-color: #ea5550;
   border: none;
@@ -211,6 +212,27 @@ body {
   border-radius: 10px;
   width: 70px;
 }
+
+/* 編集画面 */
+.edit-button{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 0px;
+  justify-content: space-between; 
+}
+
+.delete-button{
+  background-color:#82cddd ;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 10px;
+  width: 70px;
+}
+
 
 /* ログイン・新規登録 */
 .container {
