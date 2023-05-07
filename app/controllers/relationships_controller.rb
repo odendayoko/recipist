@@ -18,8 +18,4 @@ class RelationshipsController < ApplicationController
     user = User.find(params[:id])
     @users = user.follower_users.page(params[:page]).per(3).reverse_order
   end
-
-  
-
-  def 
 end
