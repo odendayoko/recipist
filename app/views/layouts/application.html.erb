@@ -41,14 +41,16 @@
     </header>
     <%= yield %>
     <footer>
-      <p>
-        Copyright Recipist 2023.
-      </p>
-      <% if user_signed_in? %>
-        <div class="user_nav grid-6">
-          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-        </div>
-      <% end %>     
+      <div class="container">
+        <p>
+          Copyright Recipist 2023.
+        </p>
+        <% if user_signed_in? %>
+          <div class="user_nav grid-6">
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+          </div>
+        <% end %>
+      </div>  
     </footer>
   </body>
 </html>

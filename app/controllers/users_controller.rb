@@ -16,6 +16,7 @@ class UsersController < ApplicationController
   end
 
   def favorite_menus
+    @page = "likes"
     @menus = current_user.favorite_menus
   end
 

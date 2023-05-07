@@ -1,7 +1,31 @@
+<% if @page == "menus" %>
+
 <div class="top-link">
   <div class="links">
-  <%= link_to "Recipies", root_path,class: "link" %>
+  <%= link_to "Recipies", root_path,class: "link", style: "color: #bc611e; border-bottom: 3px solid #bc611e" %>
   <%= link_to "Likes", "/users/#{current_user.id}/favorite_menus",class: "link"%>
   <%= link_to "Follwing", "/menus/following_menus",class: "link"%>
   </div>
 </div>
+
+<% elsif @page == "likes" %>
+<div class="top-link">
+  <div class="links">
+  <%= link_to "Recipies", root_path,class: "link" %>
+  <%= link_to "Likes", "/users/#{current_user.id}/favorite_menus",class: "link", style: "color: #bc611e; border-bottom: 3px solid #bc611e"%>
+  <%= link_to "Follwing", "/menus/following_menus",class: "link"%>
+  </div>
+</div>
+
+
+<% elsif @page == "followings" %>
+
+<div class="top-link">
+  <div class="links">
+  <%= link_to "Recipies", root_path,class: "link" %>
+  <%= link_to "Likes", "/users/#{current_user.id}/favorite_menus",class: "link"%>
+  <%= link_to "Follwing", "/menus/following_menus",class: "link", style: "color: #bc611e; border-bottom: 3px solid #bc611e"%>
+  </div>
+</div>
+
+<% end %>

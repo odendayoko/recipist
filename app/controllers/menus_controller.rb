@@ -3,6 +3,7 @@ class MenusController < ApplicationController
   before_action :move_to_index, except: [:index, :show, :search]
   
   def index
+    @page = "menus"
     @menus = current_user.menus.order("created_at DESC")
   end
 
@@ -54,6 +55,7 @@ class MenusController < ApplicationController
 
 
   def following_menus
+    @page = "followings"
     following_user_id = current_user.following_users.pluck(:id)
     @menus = Menu.where(user_id: following_user_id)
   end  
