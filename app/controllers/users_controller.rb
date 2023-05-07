@@ -10,6 +10,9 @@ class UsersController < ApplicationController
   def mypage
     @nickname = current_user.nickname
     @menus = current_user.menus
+    @user = User.find(params[:id])
+    @following_users = @user.following_users
+    @follower_users = @user.follower_users
   end
 
   def favorite_menus
@@ -27,5 +30,5 @@ class UsersController < ApplicationController
     end
   end
 
-  
+
 end

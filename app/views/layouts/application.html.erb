@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', 'https://use.fontawesome.com/releases/v6.4.0/css/all.css' %>
   </head>
 
   <body>
@@ -17,8 +18,8 @@
             <% if user_signed_in? %>
               <div class="user_nav grid-6">
                 <%= current_user.nickname %>
-                <%= link_to "マイページ", "/users/mypage",class: "post"%>
-                <%= link_to "ユーザーを検索する", "/users/user_search",class: "post"%>
+                <%= link_to "マイページ", "/users/#{current_user.id}/mypage",class: "post"%>
+                <%= link_to "ユーザー検索", "/users/user_search",class: "post"%>
                 <%= link_to "投稿する", new_menu_path, class: "post" %>
               </div>
             <% else %>

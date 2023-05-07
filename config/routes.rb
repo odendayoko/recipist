@@ -12,11 +12,12 @@ Rails.application.routes.draw do
     member do
       get 'favorite_menus'
       get :follows, :followers
+      get 'mypage'
     end
     collection do
       get 'search'
       get 'user_search'
-      get 'mypage'
+     
     end
     resource :relationships, only: [:create, :destroy]
   end

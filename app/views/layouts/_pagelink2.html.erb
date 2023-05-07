@@ -1,6 +1,6 @@
 <div class="new-contents">
   <div class="new-container">
-    <h2>レシピを編集する</h2>
+    <h2><%= yield %></h2>
 
     <% if @menu.errors.any? %>
       <div id="error_explanation">
@@ -29,11 +29,10 @@
      <div class = "new-title"> <%= "写真" %> </div>
       <%= form.file_field :image ,class:"new-recipe-form" %>
     </div>
-    <div class = edit-button>
+    <div class = new-submit>
       <%= form.submit "保存" ,class: "new-submit-botton"%>
-      <%= button_to '削除', menu_path(@menu.id), method: :delete,class: "delete-button"%>
     </div>
-
+    <%= yield %>
     <% end %>
   </div>
 </div>

@@ -195,6 +195,17 @@ body {
   border-radius: 4px;
 }
 
+/* メモ入力のテキストフィールド */
+
+.memo-field{
+  height: auto;
+  min-height: 100px;
+}
+
+.memo-field::placeholder {
+  font-family: "Verdana",  sans-serif;
+}
+
 .new-submit{
   display: flex;
   flex-direction: column;
@@ -331,6 +342,21 @@ h2 {
     color: #4e3618;
     padding: 15px;
   }
+  .like-btn {
+    width: 25px;
+    height: 30px;
+    font-size: 25px;
+    color: #808080; 
+    margin-left: 20px;
+    }
+   
+   .unlike-btn {
+    width: 25px;
+    height: 30px;
+    font-size: 25px;
+    color: #ffdc00;
+    margin-left: 20px;
+    }
   
 /* スマホ表示時 */
 @media (max-width: 500px) {
