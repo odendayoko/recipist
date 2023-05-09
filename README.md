@@ -2,13 +2,11 @@
 Recipist（レシピスト）
 
 ## URL
-https://recipist.onrender.com
-![ER図 drawio](https://github.com/odendayoko/recipist/assets/128268777/0d39e75c-4361-467e-8082-9f024db3eef3)
+(https://github.com/odendayoko/recipist/assets/128268777/0d39e75c-4361-467e-8082-9f024db3eef3)
 
 ## テスト用アカウント
 以下の通りのアドレスとパスワードでログインしサービスを体験していただけます。
-- ログインページ: https://recipist.onrender.com/users/sign_in![ER図 drawio](https://github.com/odendayoko/recipist/assets/128268777/b705bf8b-9c94-4d4e-8d00-86172d49e20c)
-
+- ログインページ: https://recipist.onrender.com/users/sign_in
 - メールアドレス：test1@test.com
 - パスワード：aaa111
 
@@ -30,7 +28,7 @@ Recipistは「作った料理のレシピサイトのURLなどの情報を記録
 
 前述のアプリケーション概要に記述した3つの機能を実装したアプリを作成することで上記の悩みを解消できると考え、今回のアプリ作成に至りました。
 
-またこの悩みは、日々料理を作る多くの人たちにも共通する問題であると考え、このアプリを作成する価値があると考えました。![ER図 drawio](https://github.com/odendayoko/recipist/assets/128268777/81af86ed-bd51-4a9d-a1e7-f174b5cd263d)
+またこの悩みは、日々料理を作る多くの人たちにも共通する問題であると考え、このアプリを作成する価値があると考えました。
 
 
 ## ペルソナ
@@ -98,10 +96,10 @@ Recipistは「作った料理のレシピサイトのURLなどの情報を記録
 「お弁当のおかず」、「主食」、「肉料理」、「居酒屋メニュー」などのタグをつけて、「レシピ」を保存する機能です。タグの名前でレシピを検索できる機能も実装予定です。
 
 ## データベース設計
-![ER図 (1)](https://user-images.githubusercontent.com/128268777/233846958-bf0d185b-e287-48f3-9f6f-5c32c0ee72fa.jpg)
+![ER図 drawio](https://github.com/odendayoko/recipist/assets/128268777/b297fd00-1b17-4937-b3cc-1fca5bf4645a)
 
 ## 画面遷移図
-![ER図-ページ2](https://user-images.githubusercontent.com/128268777/233847080-a66fd60f-65f7-49e7-8654-09059d7bcd27.jpg)
+![画面遷移図 drawio](https://github.com/odendayoko/recipist/assets/128268777/7ec7c682-0472-423b-b903-9396a183bc00)
 
 ## 開発環境
 - 言語
