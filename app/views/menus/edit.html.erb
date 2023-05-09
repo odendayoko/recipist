@@ -30,10 +30,10 @@
       <%= form.file_field :image ,class:"new-recipe-form" %>
     </div>
     <div class = edit-button>
-      <%= form.submit "保存" ,class: "new-submit-botton"%>
-      <%= button_to '削除', menu_path(@menu.id), method: :delete,class: "delete-button"%>
-    </div>
-
+      <%= form.submit "保存" ,class: "new-submit-button"%>
+    
     <% end %>
+     <%= button_to '削除', menu_path(@menu.id), method: :delete,class: "delete-button"%>
+    </div>
   </div>
 </div>

@@ -1,17 +1,29 @@
 
 <h3 class="show-recipe-name"><%= @menu.name %>の詳細情報</h3>
 
+<div id="like-btn<%= @menu.id %>">
+    <% if user_signed_in? && @menu.favorited_by?(current_user)%>
+      <%=link_to menu_favorite_path(@menu.id),  method: :delete  do%>
+       <i class="fa-solid fa-star unlike-btn"></i>
+      <% end %>
+    <% else %>
+      <%=link_to menu_favorites_path(@menu.id), method: :post do %>
+        <i class="fa-solid fa-star like-btn"></i>
+      <% end %>
+    <% end %>
+</div>
+
 <div class="show-recipe-image">
   <%= image_tag @menu.image if @menu.image.attached? %>
 </div>
 
-<div class = "show-hed">
-  <div class = "show-back-botton" >
-    <%= link_to '戻る', root_path, method: :get %>
-  </div>
 
-  <% if @menu.user.id == current_user.id %>
-    <div class= "show-edit-botton">
+<div class = "show-hed">
+  <% if user_signed_in? && @menu.user.id == current_user.id %>
+    <div class = "show-back-button" >
+     <%= link_to '戻る', root_path, method: :get %>
+    </div>
+    <div class= "show-edit-button">
       <%= link_to '編集', edit_menu_path(@menu.id), method: :get %>
     </div>
   <% end %>
@@ -26,15 +38,4 @@
 </div>
 
 
-<div id="like-btn<%= @menu.id %>">
-    <% if user_signed_in? && @menu.favorited_by?(current_user)%>
-      <%=link_to menu_favorite_path(@menu.id),  method: :delete  do%>
-       <i class="fa-solid fa-star unlike-btn"></i>
-      <% end %>
-    <% else %>
-      <%=link_to menu_favorites_path(@menu.id), method: :post do %>
-        <i class="fa-solid fa-star like-btn"></i>
-      <% end %>
-    <% end %>
-</div>
 
