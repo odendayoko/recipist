@@ -103,7 +103,7 @@ Recipistは「作った料理のレシピサイトのURLなどの情報を記録
 
 ## 開発環境
 - 言語
-HTML / CSS / Ruby / Ruby on Rails /JavaSclipt
+HTML / CSS / Ruby / Ruby on Rails /JavaScript
 - サービス
 Render / GitHub / AWS
 
