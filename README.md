@@ -2,7 +2,7 @@
 Recipist（レシピスト）
 
 ## URL
-(https://github.com/odendayoko/recipist/assets/128268777/0d39e75c-4361-467e-8082-9f024db3eef3)
+https://recipist.onrender.com
 
 ## テスト用アカウント
 以下の通りのアドレスとパスワードでログインしサービスを体験していただけます。
