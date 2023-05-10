@@ -23,10 +23,14 @@
           <div class="hamburger-menu">
             
               <% if user_signed_in? %>
-                  <%# <%= current_user.nickname %> 
+                  <div class = "user-name">
+                   <%= current_user.nickname %>
+                  </div>
+                  <%# <div class= "hamburger-list"> %>
+                  <%# <i class="fa-solid fa-user"></i> %>
                   <%= link_to "マイページ", "/users/#{current_user.id}/mypage",class: "post"%>
+                  <%# </div> %>
                   <%= link_to "ユーザー検索", "/users/user_search",class: "post"%>
-                  <%= link_to "投稿する", new_menu_path, class: "post" %>
                   <%= link_to "ログアウト", destroy_user_session_path, method: :delete,class: "post"%>
               <% else %>
                   <%= link_to "ログイン", new_user_session_path, class: "post" %>
@@ -36,14 +40,7 @@
           </div>
         </div>
       </div>
-      <% if user_signed_in? %>
-        <div class="search-top">
-          <%= form_with(url: search_menus_path, local: true, method: :get, class: "search-form") do |form| %>
-            <%= form.text_field :word, placeholder: "レシピ名", class: "search-input" %>
-            <%= form.submit "検索", class: "search-button" %>
-          <% end %>
-        </div>
-      <% end %>
+      
     </header>
     <%= yield %>
     <footer>

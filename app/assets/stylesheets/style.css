@@ -46,6 +46,25 @@ body {
   height: 70px;
   text-align: center;
   line-height: 70px;
+  border-bottom: 0.5px solid #4e3618;
+}
+/* .hamburger-list {
+  display: flex; /* 要素を横並びにするための Flexbox */
+  /* align-items: center; 要素を垂直方向に中央揃え */
+/* } */
+
+/* .hamburger-list i { */
+  /* margin-right: 5px; アイコンとリンクの間にスペースを設ける */
+/* } */ 
+
+
+.user-name {
+  color: #bc611e;
+  display: block;
+  height: 70px;
+  text-align: center;
+  line-height: 70px;
+  border-bottom: 0.5px solid #4e3618;
 }
 
 /* ハンバーガーメニュー */
