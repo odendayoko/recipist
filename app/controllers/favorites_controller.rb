@@ -1,8 +1,12 @@
 class FavoritesController < ApplicationController
+  before_action :authenticate_user!
+  
   def create
-    favorite = current_user.favorites.build(menu_id: params[:menu_id])
-    favorite.save
-    redirect_to request.referer
+    if user_signed_in?
+      favorite = current_user.favorites.build(menu_id: params[:menu_id])
+      favorite.save
+      redirect_to request.referer
+    end
   end
 
   def destroy

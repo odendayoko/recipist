@@ -1,5 +1,5 @@
 class MenusController < ApplicationController
-
+  before_action :authenticate_user!, except: [:show]
   before_action :move_to_index, except: [:index, :show, :search]
   
   def index
@@ -56,7 +56,9 @@ class MenusController < ApplicationController
 
   def following_menus
     @page = "followings"
-    following_user_id = current_user.following_users.pluck(:id)
+    if user_signed_in?
+     following_user_id = current_user.following_users.pluck(:id)
+    end
     @menus = Menu.where(user_id: following_user_id)
   end  
 
