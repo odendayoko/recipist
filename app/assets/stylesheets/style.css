@@ -231,12 +231,12 @@ span {
 }
 .new-recipe-link {
   display: inline-block;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  border-radius: 60%;
   text-align: center;
-  line-height: 50px;
-  background-color: #bc611e;
+  line-height: 60px;
+  background-color: #ea5550;
   font-size: 25px;
   position: fixed;
   bottom: 30px;
