@@ -157,6 +157,8 @@ span {
   margin-right: 20px;
   font-size: 18px;
 }
+
+
 .index-recipe {
   max-width: 400px;
   padding: 16px;
@@ -201,6 +203,31 @@ span {
 .index-recipe-url a {
   color:#4e3618; 
 }
+
+.new-recipe-button{
+  color: #fff;
+}
+.new-recipe-link {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  background-color: #bc611e;
+  font-size: 25px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition-duration: .4s;
+  box-shadow: 0 2px 4px #808080
+}
+
+.new-recipe-link:hover {
+  transform: scale(1.1);
+}
+
+
 /* 新規投稿ページ */
 .new-container {
   max-width: 400px;

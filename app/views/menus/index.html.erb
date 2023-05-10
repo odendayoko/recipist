@@ -1,8 +1,11 @@
+<div class = "new-recipe-link">
+  <%=link_to new_menu_path, method: :get,class:"new-recipe-button" do%>
+    <i class="fa-solid fa-utensils"></i>
+  <% end %>
+</div>
+      
 
-<%# 
-<div class="user_nav grid-6">
-  <a class="post" href="/menus/new">レシピを追加する</a>
-</div> %>
+
 <%= render 'layouts/pagelink'%>
 
 <div class="recipe-list">
