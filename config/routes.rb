@@ -16,8 +16,7 @@ Rails.application.routes.draw do
     end
     collection do
       get 'search'
-      get 'user_search'
-     
+      get 'user_search'  
     end
     resource :relationships, only: [:create, :destroy]
   end

@@ -1,12 +1,16 @@
 <% if user_signed_in? %>
-        <div class="search-top">
-          <%= form_with(url: search_menus_path, local: true, method: :get, class: "search-form") do |form| %>
-            <%= form.text_field :word, placeholder: "レシピ名", class: "search-input" %>
-            <%= form.submit "検索", class: "search-button" %>
-          <% end %>
-        </div>
-      <% end %>
-      
+  <div class="search-top">
+    <%= form_with(url: search_menus_path, local: true, method: :get, class: "search-form") do |form| %>
+      <%= form.text_field :word, placeholder: "レシピ名", class: "search-input" %>
+      <%= form.submit "検索", class: "search-button" %>
+    <% end %>
+  </div>
+<% end %>
+
+<%=link_to new_menu_path, method: :get,class:"new-recipe-button" do%>
+  <i class="fa-solid fa-utensils"></i>
+<% end %>
+
 <% if @page == "menus" %>
   <div class="top-link">
     <div class="links">
@@ -35,9 +39,5 @@
   </div>
 <% end %>
 
-<div class = "new-recipe-link">
-  <%=link_to new_menu_path, method: :get,class:"new-recipe-button" do%>
-    <i class="fa-solid fa-utensils"></i>
-  <% end %>
-</div>
+
       
