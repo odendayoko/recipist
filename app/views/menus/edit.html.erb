@@ -1,5 +1,9 @@
-<div class="new-contents">
-  <div class="new-container">
+<div class="contents">
+  <div class="container">
+
+  <%= button_to menu_path(@menu.id), method: :delete,class: "delete-button" do%>
+    <i class="fa-regular fa-trash-can"></i>
+  <% end %>
     <h2>レシピを編集する</h2>
 
     <% if @menu.errors.any? %>
@@ -29,11 +33,11 @@
      <div class = "new-title"> <%= "写真" %> </div>
       <%= form.file_field :image ,class:"new-recipe-form" %>
     </div>
-    <div class = edit-button>
+    <div class = "new-submit">
       <%= form.submit "保存" ,class: "new-submit-button"%>
-    
-    <% end %>
-     <%= button_to '削除', menu_path(@menu.id), method: :delete,class: "delete-button"%>
     </div>
+    <% end %>
+
+
   </div>
 </div>

@@ -137,16 +137,22 @@ span {
   margin-top: 16px;
 }
 
-/* ログイン・新規登録ボタン */
-.header-button {
-  background-color: #fff;
+/* ログイン・新規登録 */
+.login_button{
+  background-color: #ea5550;
   border: none;
-  padding: 8px 16px;
+  color: #fff;
   font-size: 16px;
   font-weight: bold;
-  color: #ffcc00;
-  border-radius: 4px;
-  margin-left: 16px;
+  padding: 8px 16px;
+  border-radius: 10px;
+}
+
+.login_content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 16px;
 }
 
 .logout {
@@ -159,7 +165,7 @@ span {
   color: #4e3618;
 }
 
-/* トップページ */
+/* トップページのリンク */
 .top-link{
   display: flex;
   justify-content: center;
@@ -230,6 +236,8 @@ span {
 .fa-solid.fa-utensils{
   color: #fff;
 }
+
+/* 新規投稿ボタン */
 .new-recipe-button {
   display: inline-block;
   width: 60px;
@@ -278,7 +286,6 @@ span {
 }
 
 /* メモ入力のテキストフィールド */
-
 .memo-field{
   height: auto;
   min-height: 100px;
@@ -293,10 +300,9 @@ span {
   flex-direction: column;
   align-items: center;
   padding: 10px 0px;
-  
 }
 
-.new-submit-button {
+.new-submit-button{
   background-color: #ea5550;
   border: none;
   color: #fff;
@@ -317,14 +323,10 @@ span {
 }
 
 .delete-button{
-  background-color:#82cddd ;
+  background-color: #fff;
   border: none;
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 8px 16px;
-  border-radius: 10px;
-  width: 70px;
+  color: #ea5550;
+  font-size: 28px;
 }
 
 h2 {
