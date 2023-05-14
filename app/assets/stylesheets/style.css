@@ -75,7 +75,6 @@ body {
 /* ハンバーガーメニュー */
 .hamburger-menu {
   display: none;
-  bottom: 0;
   width: 30%;
   position: absolute;
   top: 67.5px;

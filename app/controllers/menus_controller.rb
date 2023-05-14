@@ -59,7 +59,7 @@ class MenusController < ApplicationController
     if user_signed_in?
      following_user_id = current_user.following_users.pluck(:id)
     end
-    @menus = Menu.where(user_id: following_user_id)
+    @menus = Menu.where(user_id: following_user_id).order("created_at DESC")
   end  
 
   private

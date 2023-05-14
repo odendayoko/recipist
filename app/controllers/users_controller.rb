@@ -18,7 +18,7 @@ class UsersController < ApplicationController
 
   def favorite_menus
     @page = "likes"
-    @menus = current_user.favorite_menus
+    @menus = current_user.favorite_menus.order("created_at DESC")
   end
 
   def user_search
