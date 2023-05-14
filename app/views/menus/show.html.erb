@@ -19,10 +19,11 @@
 
 
   <div class = "show-hed">
-    <% if user_signed_in? && @menu.user.id == current_user.id %>
+    
       <div class = "show-back-button" >
-      <%= link_to '戻る', root_path, method: :get %>
+      <%= link_to '戻る', request.referrer, method: :get %>
       </div>
+      <% if user_signed_in? && @menu.user.id == current_user.id %>
       <div class= "show-edit-button">
         <%= link_to '編集', edit_menu_path(@menu.id), method: :get %>
       </div>
