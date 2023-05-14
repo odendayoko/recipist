@@ -4,6 +4,6 @@ window.onload = function() {
 
   hamburger.addEventListener('click', () => {
     menu.classList.toggle('show');
-});
+  });
 
 }

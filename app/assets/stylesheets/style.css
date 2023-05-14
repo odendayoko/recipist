@@ -14,7 +14,7 @@ body {
 
 .container {
   max-width: 400px;
-  margin: 0 auto;
+  margin: 15px auto;
   background-color: #fff;
   padding: 30px 20px;
   border-radius: 5px;
@@ -33,13 +33,11 @@ body {
 .header__bar {
   display: flex;
   justify-content: space-between;
- 
 }
 
 .header-logo {
-  font-size: 35px;
+  font-size: 24px;
   font-weight: bold;
-
 }
 
 .header-logo a {
@@ -80,14 +78,14 @@ body {
   bottom: 0;
   width: 30%;
   position: absolute;
-  top: 80px;
+  top: 67.5px;
   right: 0;
-  height: 50vh;
 }
 
 .hamburger-menu.show {
   display: block;
   background-color:#ffff9e;
+  height: 280px;
 }
 
 span {
@@ -114,7 +112,7 @@ span {
   font-size: 16px;
   padding: 4px;
   margin-right: 13px;
-  width: 50%;
+  width: 55%;
   border-radius: 4px;
 }
 
@@ -329,11 +327,6 @@ span {
   font-size: 28px;
 }
 
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 24px;
-}
   .field {
     margin-bottom: 20px;
   }

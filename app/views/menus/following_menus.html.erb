@@ -1,18 +1,20 @@
 <%= render 'layouts/pagelink'%>
-<div class="recipe-list">
-  <% @menus.each do |menu| %>
-    <div class="index-recipe">
-      <div class="index-recipe-image">
-        <%= link_to menu_path(menu.id) do %>
-          <%= image_tag menu.image if menu.image.attached? %>
-        <% end %>
+<div class="container">
+  <div class="recipe-list">
+    <% @menus.each do |menu| %>
+      <div class="index-recipe">
+        <div class="index-recipe-image">
+          <%= link_to menu_path(menu.id) do %>
+            <%= image_tag menu.image if menu.image.attached? %>
+          <% end %>
+        </div>
+        <div class="index-recipe-name">
+          <%= link_to "#{menu.name}" , menu_path(menu.id)%>
+        </div>
+        <div class="index-recipe-url">
+          <%= link_to "#{menu.url}", menu.url, target: "_blank"%>
+        </div>
       </div>
-      <div class="index-recipe-name">
-        <%= link_to "#{menu.name}" , menu_path(menu.id)%>
-      </div>
-      <div class="index-recipe-url">
-        <%= link_to "#{menu.url}", menu.url, target: "_blank"%>
-      </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
