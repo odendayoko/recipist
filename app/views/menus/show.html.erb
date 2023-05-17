@@ -1,3 +1,5 @@
+<% set_meta_tags title: @menu.name, description: @menu.memo, og:{image: image_url(url_for(@menu.image))}, twitter:{image: image_url(url_for(@menu.image))} %>
+
 <div class="container">
   <h2><%= @menu.name %>の詳細情報</h2>
 
@@ -21,7 +23,7 @@
   <div class = "show-hed">
     <% if user_signed_in? %>
       <div class = "show-back-button" >
-      <%= link_to '戻る', request.referrer, method: :get %>
+        <%= link_to '戻る', request.referrer, method: :get %>
       </div>
     <% end %>
     <% if user_signed_in? && @menu.user.id == current_user.id %>
