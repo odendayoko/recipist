@@ -2,10 +2,10 @@ module ApplicationHelper
   def default_meta_tags
     {
       site: 'Recipist',
-      title: '作ったレシピの記録サイト',
+      title: 'レシピの記録サイト',
       reverse: true,
       charset: 'utf-8',
-      description: 'Recipistを使えば自分が作ったレシピを、レシピサイトのURLと一緒に記録し、シェアすることができます。',
+      description: 'Recipistを使えば自分が作った料理のレシピを、レシピサイトのURLと一緒に記録し、シェアすることができます。',
       keywords: '料理,レシピ,ご飯',
       canonical: request.original_url,
       separator: '|',

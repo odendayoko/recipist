@@ -1,5 +1,9 @@
-<% set_meta_tags title: @menu.name, description: @menu.memo, og:{image: image_url(url_for(@menu.image))}, twitter:{image: image_url(url_for(@menu.image))} %>
 
+<% if @menu.image.attached? %>
+  <% set_meta_tags title: @menu.name, description: @menu.memo,twitter:{image: image_url(@menu.image.attachment.service.send(:object_for,@menu.image.key).public_url)} %>
+<% end %>
+
+<%# <%= image_tag rails_storage_proxy_url(@menu.image) %> 
 <div class="container">
   <h2><%= @menu.name %>の詳細情報</h2>
 
@@ -15,10 +19,10 @@
       <% end %>
   </div>
 
+<%# <%= link_to 'Twitter', "https://twitter.com/share?url=#{request.url}/&text=#{@menu.name}", title: 'Twitter', target: '_blank' %> 
   <div class="show-recipe-image">
     <%= image_tag @menu.image if @menu.image.attached? %>
   </div>
-
 
   <div class = "show-hed">
     <% if user_signed_in? %>
