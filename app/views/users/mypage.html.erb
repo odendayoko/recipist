@@ -1,7 +1,13 @@
-
-
-<%= "Following" %>
-<%= @following_users.count %>
-
-<%= "Followers" %>
-<%=  @follower_users.count %>
+<div class="container">
+  <h2><%= @nickname %></h2>
+  <div class="follow-content">
+    <div class="following">
+      <%= "Following" %>
+      <%= @following_users.count %>
+    </div>
+    <div class="followers">
+      <%= "Followers" %>
+      <%=  @follower_users.count %>
+    </div>
+  </div>
+</div>

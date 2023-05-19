@@ -436,8 +436,16 @@ span {
 }
 
 /* ユーザーサーチページ */
-
 .user-search-user {
   margin: 10px
 }
 
+/* マイページ */
+.follow-content {
+  display: flex;
+  padding-top: 15px;
+}
+
+.following {
+  padding-right: 15px;
+}

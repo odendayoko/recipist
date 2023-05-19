@@ -1,11 +1,9 @@
-
 <% if @menu.image.attached? %>
   <% set_meta_tags title: @menu.name, description: @menu.memo,twitter:{image: image_url(@menu.image.attachment.service.send(:object_for,@menu.image.key).public_url)} %>
 <% end %>
 
-<%# <%= image_tag rails_storage_proxy_url(@menu.image) %> 
 <div class="container">
-  <h2><%= @menu.name %>の詳細情報</h2>
+  <h2><%= @menu.name %></h2>
 
   <div id="like-btn<%= @menu.id %>">
       <% if user_signed_in? && @menu.favorited_by?(current_user)%>
@@ -38,11 +36,11 @@
   </div>
 
   <div class = "show-recipe-url">
-  <%= link_to "レシピのURL： #{@menu.url}", @menu.url %>
+  <%= link_to "レシピのURL：#{@menu.url}", @menu.url %>
   </div>
 
   <div class = "show-recipe-memo">
-  <%= "メモ：　#{@menu.memo}" %>
+  <%= "メモ：#{@menu.memo}" %>
   </div>
 
 </div>
