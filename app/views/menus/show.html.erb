@@ -21,29 +21,46 @@
 
   <h2><%= @menu.name %></h2>
 
-  <div id="like-btn<%= @menu.id %>">
-      <% if user_signed_in? && @menu.favorited_by?(current_user)%>
-        <%=link_to menu_favorite_path(@menu.id),  method: :delete  do%>
-        <i class="fa-solid fa-star unlike-btn"></i>
+  <div class= "show-bar">
+   
+    <div class= "like-container">
+        <% if user_signed_in? && @menu.favorited_by?(current_user)%>
+          <%=link_to menu_favorite_path(@menu.id),  method: :delete  do%>
+          <i class="fa-solid fa-star unlike-btn"></i>
+          <% end %>
+        <% else %>
+          <%=link_to menu_favorites_path(@menu.id), method: :post do %>
+            <i class="fa-solid fa-star like-btn"></i>
+          <% end %>
         <% end %>
-      <% else %>
-        <%=link_to menu_favorites_path(@menu.id), method: :post do %>
-          <i class="fa-solid fa-star like-btn"></i>
-        <% end %>
+    </div>
+    
+    <div class="share-container">
+      <%= link_to "https://twitter.com/share?url=#{request.url}/&text=#{@menu.name}のレシピ", title: 'Twitter', target: '_blank' do %>
+        <i class="fa-brands fa-twitter" style='color: #3399FF;'></i>
       <% end %>
+      <%= link_to "https://social-plugins.line.me/lineit/share?url=#{request.url}/&text=#{@menu.name}のレシピ" do %>
+        <i class="fa-brands fa-line" style='color: #06c755;'></i>
+      <% end%>
+    </div>
   </div>
 
-<%# <%= link_to 'Twitter', "https://twitter.com/share?url=#{request.url}/&text=#{@menu.name}", title: 'Twitter', target: '_blank' %> 
   <div class="show-recipe-image">
     <%= image_tag @menu.image if @menu.image.attached? %>
   </div>
 
-  <div class = "show-recipe-url">
-  <%= link_to "レシピのURL：#{@menu.url}", @menu.url %>
-  </div>
+  <div class = "show-recipe-list">
+    <h3><%="レシピのURL"%></h3>
+    <div class= 'show-recipe-url'>
+    <%= link_to @menu.url, @menu.url ,target: '_blank' %>
+    </div>
+ </div>
 
-  <div class = "show-recipe-memo">
-  <%= "メモ：#{@menu.memo}" %>
+  <div class = "show-recipe-list">
+    <h3><%="メモ"%></h3>
+    <div class='show-recipe-memo'>
+    <%= @menu.memo %>
+    </div>
   </div>
 
 </div>
