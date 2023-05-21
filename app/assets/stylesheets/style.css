@@ -356,22 +356,25 @@ span {
   .show-hed{
     display: flex;
     justify-content: space-between; 
-    padding: 0px 10px;
+    padding: 10px;
   }
 
-  .show-back-button a{
-    color:#26753e;
-  }
   .show-back-button{
-    border-radius: 5px; 
-    padding: 5px;
-    text-align: center;
-    border: solid 1px #26753e;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
   }
+
+  .fa-chevron-left{
+    color: #26753e;
+    font-size: 20px;
+
+  }
+  
   .show-recipe-name {
     color:#4e3618;
     padding: 10px;
-    text-align: center;
   }
 
   .show-edit-button a{
@@ -413,7 +416,7 @@ span {
     height: 30px;
     font-size: 25px;
     color: #808080; 
-    margin-left: 20px;
+    margin-left: 10px;
     }
    
    .unlike-btn {
@@ -421,7 +424,7 @@ span {
     height: 30px;
     font-size: 25px;
     color: #ffdc00;
-    margin-left: 20px;
+    margin-left: 10px;
     }
   
 /* スマホ表示時 */
