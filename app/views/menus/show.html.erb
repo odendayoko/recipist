@@ -4,6 +4,21 @@
 <% end %>
 
 <div class="container">
+  <div class = "show-hed">
+    <% if user_signed_in? %>
+      <div class = "show-back-button" >
+        <%= link_to request.referrer, method: :get do%>
+          <i class="fa-solid fa-chevron-left"></i>
+        <% end %>
+      </div>
+    <% end %>
+    <% if user_signed_in? && @menu.user.id == current_user.id %>
+        <div class= "show-edit-button">
+          <%= link_to '編集', edit_menu_path(@menu.id), method: :get %>
+        </div>
+    <% end %>
+  </div>
+
   <h2><%= @menu.name %></h2>
 
   <div id="like-btn<%= @menu.id %>">
@@ -21,19 +36,6 @@
 <%# <%= link_to 'Twitter', "https://twitter.com/share?url=#{request.url}/&text=#{@menu.name}", title: 'Twitter', target: '_blank' %> 
   <div class="show-recipe-image">
     <%= image_tag @menu.image if @menu.image.attached? %>
-  </div>
-
-  <div class = "show-hed">
-    <% if user_signed_in? %>
-      <div class = "show-back-button" >
-        <%= link_to '戻る', request.referrer, method: :get %>
-      </div>
-    <% end %>
-    <% if user_signed_in? && @menu.user.id == current_user.id %>
-      <div class= "show-edit-button">
-        <%= link_to '編集', edit_menu_path(@menu.id), method: :get %>
-      </div>
-    <% end %>
   </div>
 
   <div class = "show-recipe-url">
