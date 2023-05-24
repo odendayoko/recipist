@@ -65,7 +65,16 @@ class MenusController < ApplicationController
 
   private
   def menu_params
-    params.require(:menu).permit(:name, :url, :memo, :image).merge(user_id: current_user.id)
+    image_size =  ImageProcessing::MiniMagick.source(params.require(:menu).permit(:image)[:image].tempfile).call.size
+  # 画像が500kB以上ならリサイズする
+    if image_size > 500000
+      resized_image = ImageProcessing::MiniMagick.source(params.require(:menu).permit(:image)[:image].tempfile).resize_to_fit(500,500).call
+      new_params = params
+      new_params.require(:menu).permit(:image)[:image].tempfile = resized_image
+      new_params.require(:menu).permit(:name, :url, :memo, :image).merge(user_id: current_user.id)
+    else
+      params.require(:menu).permit(:name, :url, :memo, :image).merge(user_id: current_user.id)
+    end
   end
 
   def move_to_index
