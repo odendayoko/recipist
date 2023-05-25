@@ -1,7 +1,7 @@
 <div class="contents">
   <div class="container">
 
-  <%= button_to menu_path(@menu.id), method: :delete,class: "delete-button" do%>
+  <%= button_to menu_path(@menu.id), method: :delete, data: {confirm: "レシピを削除しますか？"},class: "delete-button" do%>
     <i class="fa-regular fa-trash-can"></i>
   <% end %>
     <h2>レシピを編集する</h2>

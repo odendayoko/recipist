@@ -439,12 +439,10 @@ span {
   height: 25px;
   padding: 5px 0px;
 } 
-  .like-container{
-
-  }
     .like-btn {
       font-size: 25px;
       color: #808080; 
+      padding-left: 15px;
       }
     
     .unlike-btn {
@@ -452,14 +450,15 @@ span {
       color: #ffdc00;
       }
   
-  .share-container {
-    
-    }
-
-    .fa-twitter,.fa-line{
+    .fa-twitter {
       font-size: 25px;
       padding-right: 5px;
     }
+
+    .fa-line {
+      font-size: 25px;
+    }
+    
 
 /* スマホ表示時 */
 @media (max-width: 500px) {
