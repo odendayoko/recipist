@@ -448,6 +448,7 @@ span {
     .unlike-btn {
       font-size: 25px;
       color: #ffdc00;
+      padding-left: 15px;
       }
   
     .fa-twitter {
