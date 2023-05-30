@@ -1,0 +1,2 @@
+document.getElementById('favorite-button<%= @menu.id %>').innerHTML = "<%= j(render partial: 'favorites/favorite', locals: {menu: @menu}) %>"
+

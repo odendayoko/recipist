@@ -67,7 +67,7 @@ class MenusController < ApplicationController
   def menu_params
     if params.require(:menu).permit(:image)[:image]
       image_size =  ImageProcessing::MiniMagick.source(params.require(:menu).permit(:image)[:image].tempfile).call.size
-    # 画像が500kB以上ならリサイズする
+      # 画像が500kB以上ならリサイズする
       if image_size > 500000
         resized_image = ImageProcessing::MiniMagick.source(params.require(:menu).permit(:image)[:image].tempfile).resize_to_fit(500,500).call
         new_params = params
