@@ -6,7 +6,7 @@ Rails.application.routes.draw do
       get 'search'
       get 'following_menus'
     end
-    resources :favorites, only: [:create, :destroy]
+    resource :favorites, only: [:create, :destroy]
   end 
   resources :users, only: :show do
     member do
