@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="welcome-top">
+    <div class="welcome-top-content">
+      <p>育てよう。<br>あなただけのレシピライブラリ</p>
+      <h1>「Recipist」</h1>
+    </div>
+    <img src="https://odendayoko0001.s3.ap-northeast-1.amazonaws.com/welcome-top.jpg" class="welcome-top-img">
+  </div>
+
+  <div class="welcome-main-contents">
+    <h2 class = "welcome-title"><span>レシピの迷子にさよなら</span></h2>
+    <p class = "welcome-intro">Recipistは作った料理のレシピを管理・整理するためのアプリケーションです。</p>
+    <p class = "welcome-intro">あなただけのレシピライブラリを育てましょう。</p>
+    <%= button_to "会員登録はこちら","users/sign_up", method: :get, class: "welcome-registration-button" %>  
+  </div>
+  <div class = "welcome-main-contents" >
+    <h2 class = "welcome-title"><span>こんなお悩みありませんか？</span></h2>
+      <div class ="welcome-main-content">
+        <h4 class="welcome-main-index">レシピを見失う</h4>
+        <p>レシピ投稿サイトやSNS、動画サイトなど、様々なサイトでレシピが公開されていて、作りたいと思ったときに、どこのサイトに掲載されていたかわからない。</p>
+      </div>
+      <div class ="welcome-main-content">
+        <h4 class="welcome-main-index">美味しかったレシピを共有したい</h4>
+        <p>家族や友人、恋人に美味しかったレシピを共有する手段が少ない。共有されても、そのレシピを保存できない。</p>
+      </div>
+      <div class="welcome-main-item">
+        <img src="https://odendayoko0001.s3.ap-northeast-1.amazonaws.com/16600_color.png" class="welcome-main-item-image">
+      </div> 
+  </div>
+
+  <div class ="welcome-main-contents">
+    <h2 class = "welcome-title"><span>Recipistでできること</span></h2>
+    <div class="welcome-main-content">
+      <h4 class ="welcome-main-index">作ったレシピを投稿！</h4>
+      <p> 料理の写真や、レシピサイトのURLを一緒に保存できる！ </p>
+      <div class="welcome-main-item">
+        <img src="https://odendayoko0001.s3.ap-northeast-1.amazonaws.com/16515_color.png" class="welcome-main-item-image">
+      </div>
+    </div>
+    <div class="welcome-main-content">
+      <h4 class="welcome-main-index">他のユーザーをフォロー！</h4>
+      <p>友人や家族が作ったレシピも見られる！</p>
+      <div class="welcome-main-item">
+        <img src="https://odendayoko0001.s3.ap-northeast-1.amazonaws.com/13122_color.png" class="welcome-main-item-image">
+      </div>
+    </div>
+    <div class="welcome-main-content">
+      <h4 class="welcome-main-index">レシピをお気に入り登録！</h4>
+      <p>自分のレシピや、他のユーザーが作ったレシピもお気に入り一覧で見られる！</p>
+      <div class="welcome-main-item">
+        <img src="https://odendayoko0001.s3.ap-northeast-1.amazonaws.com/16780_color.png" class="welcome-main-item-image">
+      </div>       
+    </div>
+    <div class="welcome-main-content">
+      <h4 class="welcome-main-index">作ったレシピをSNSでシェア！</h4>
+      <p>おすすめしたいレシピがあったらSNSでシェアしよう!</p>
+      <div class="welcome-main-item">
+        <img src="https://odendayoko0001.s3.ap-northeast-1.amazonaws.com/7077_color.png" class="welcome-main-item-image">
+      </div>  
+    </div>
+  </div>
+  <%= button_to "会員登録はこちら","users/sign_up", method: :get, class: "welcome-registration-button" %>  
+</div>

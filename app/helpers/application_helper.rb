@@ -2,7 +2,7 @@ module ApplicationHelper
   def default_meta_tags
     {
       site: 'Recipist',
-      title: 'レシピの記録サイト',
+      title: '育てよう。あなただけのレシピライブラリ',
       reverse: true,
       charset: 'utf-8',
       description: '日々の料理レシピを、レシピサイトのURLと一緒に記録し、シェアできます。',
@@ -20,7 +20,7 @@ module ApplicationHelper
       },
       twitter: {
         card: 'summary_large_image',
-        image: nil,
+        image: 'https://odendayoko0001.s3.ap-northeast-1.amazonaws.com/introduction.jpg',
       }
     }
   end
