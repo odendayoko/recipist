@@ -14,26 +14,28 @@
   <body>
      <header class="header">
      <div class="header-top">
-        <div class="header__bar">
+        <div class="header-bar">
           <h1 class="header-logo"><a href="/">Recipist</a></h1>
-          <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div class="hamburger-menu">       
-            <% if user_signed_in? %>
-                <div class = "user-name">
-                  <%= current_user.nickname %>
-                </div>
-                <%= link_to "マイページ", "/users/#{current_user.id}/mypage",class: "post"%>
-                <%= link_to "ユーザー検索", "/users/user_search",class: "post"%>
-                <%= link_to "ログアウト", destroy_user_session_path, method: :delete,class: "post"%>
-            <% else %>
-                <%= link_to "ログイン", new_user_session_path, class: "post" %>
-                <%= link_to "新規登録", new_user_registration_path, class: "post" %>
-            <% end %>
-          </div>
+          <% if user_signed_in? %>
+            <div class="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="hamburger-menu">       
+              <div class = "user-name">
+                <%= current_user.nickname %>
+              </div>
+              <%= link_to "マイページ", "/users/#{current_user.id}/mypage",class: "post"%>
+              <%= link_to "ユーザー検索", "/users/user_search",class: "post"%>
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete,class: "post"%>
+            </div>
+          <% else %>
+            <div class ="header-menu">
+              <%= link_to "ログイン", new_user_session_path, class: "header-login-button" %>
+              <%# <%= link_to "新規登録", new_user_registration_path, class: "header-registration-button" %> 
+            </div>
+          <% end %>
         </div>
       </div>
       

@@ -30,7 +30,7 @@ body {
   position: relative;
 }
 
-.header__bar {
+.header-bar {
   display: flex;
   justify-content: space-between;
 }
@@ -44,23 +44,36 @@ body {
   color: #4e3618;
 }
 
+.header-login-button {
+  background-color: #26753e;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 10px;
+  width: 70px;
+}
+
+/* .header-registration-button{
+  background-color: #ea5550;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 10px;
+  width: 70px;
+} */
+
 .post {
   color:#4e3618;
   display: block;
-  /* border: 1px solid; */
   height: 70px;
   text-align: center;
   line-height: 70px;
   border-bottom: 0.5px solid #4e3618;
 }
-/* .hamburger-list {
-  display: flex; /* 要素を横並びにするための Flexbox */
-  /* align-items: center; 要素を垂直方向に中央揃え */
-/* } */
-
-/* .hamburger-list i { */
-  /* margin-right: 5px; アイコンとリンクの間にスペースを設ける */
-/* } */ 
 
 
 .user-name {
@@ -85,6 +98,7 @@ body {
   display: block;
   background-color:#ffff9e;
   height: 280px;
+  z-index: 2;
 }
 
 .hamburger span {
@@ -136,6 +150,16 @@ body {
 
 /* ログイン・新規登録 */
 .login_button{
+  background-color: #26753e;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 10px;
+}
+
+.registration-button {
   background-color: #ea5550;
   border: none;
   color: #fff;
@@ -519,9 +543,10 @@ body {
   color: #fff;
   font-size: 16px;
   font-weight: bold;
-  padding: 8px 70px;
+  padding: 10px 100px;
   border-radius: 10px;
   margin: 20px auto;
+  width: 100%;
 }
 
 .welcome-title {
