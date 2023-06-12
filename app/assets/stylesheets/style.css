@@ -463,37 +463,26 @@ body {
   height: 25px;
   padding: 5px 0px;
 } 
-    .like-btn {
-      font-size: 25px;
-      color: #808080; 
-      padding-left: 15px;
-      }
-    
-    .unlike-btn {
-      font-size: 25px;
-      color: #ffdc00;
-      padding-left: 15px;
-      }
-  
-    .fa-twitter {
-      font-size: 25px;
-      padding-right: 5px;
-    }
 
-    .fa-line {
-      font-size: 25px;
-    }
-    
-
-/* スマホ表示時 */
-@media (max-width: 500px) {
-  .user_nav {
-    font-size: 14px;
+.like-btn {
+  font-size: 25px;
+  color: #808080; 
+  padding-left: 15px;
   }
 
-  .recipe-heading{
-    margin: 8px 0;
+.unlike-btn {
+  font-size: 25px;
+  color: #ffdc00;
+  padding-left: 15px;
   }
+
+.fa-twitter {
+  font-size: 25px;
+  padding-right: 5px;
+}
+
+.fa-line {
+  font-size: 25px;
 }
 
 /* ユーザーサーチページ */
