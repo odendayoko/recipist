@@ -20,4 +20,5 @@ Rails.application.routes.draw do
     end
     resource :relationships, only: [:create, :destroy]
   end
+  resources :welcome, only: [:index]
 end

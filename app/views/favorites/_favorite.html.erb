@@ -1,9 +1,21 @@
-<% if user_signed_in? && menu.favorited_by?(current_user) %>
-  <%=link_to menu_favorites_path(menu.id), method: :delete ,remote: true do %>
-    <i class="fa-solid fa-star unlike-btn"></i>
+<% if user_signed_in? %>
+  <% if menu.favorited_by?(current_user) %>
+    <%=link_to menu_favorites_path(menu.id), method: :delete ,remote: true do %>
+      <i class="fa-solid fa-star unlike-btn"></i>
+    <% end %>
+  <% else %>
+     <%=link_to menu_favorites_path(menu.id), method: :post,remote: true do %>
+      <i class="fa-solid fa-star like-btn"></i>
+     <% end %>
   <% end %>
 <% else %>
-  <%=link_to menu_favorites_path(menu.id), method: :post,remote: true do %>
-    <i class="fa-solid fa-star like-btn"></i>
-  <% end %>
+  <div id="favorite-button<%= menu.id %>">
+    <%=link_to menu_favorites_path(menu.id), method: :post do %>
+      <i class="fa-solid fa-star like-btn"></i>
+    <% end %>
+  </div>
 <% end %>
+
+
+
+
