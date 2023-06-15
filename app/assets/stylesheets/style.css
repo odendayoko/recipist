@@ -1,7 +1,11 @@
- * {
+/*** The new CSS reset - version 1.8.4 (last updated 14.2.2023) ***/
+ 
+*:where(:not(html,iframe,canvas,img,svg,video,audio):not(svg*,symbol*)){all:unset;display:revert}*,*::before,*::after{box-sizing:border-box}a,button{cursor:revert}ol,ul,menu{list-style:none}img{max-inline-size:100%;max-block-size:100%}table{border-collapse:collapse}input,textarea{-webkit-user-select:auto}textarea{white-space:revert}meter{-webkit-appearance:revert;appearance:revert}:where(pre){all:revert}::placeholder{color:unset}::marker{content:initial}:where([hidden]){display:none}:where([contenteditable]:not([contenteditable="false"])){-moz-user-modify:read-write;-webkit-user-modify:read-write;overflow-wrap:break-word;-webkit-line-break:after-white-space;-webkit-user-select:auto}:where([draggable="true"]){-webkit-user-drag:element}:where(dialog:modal){all:revert}
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  border: 0;
 }
 
 a {
@@ -150,6 +154,7 @@ body {
 
 /* ログイン・新規登録 */
 .login_button{
+  display: block;
   background-color: #26753e;
   border: none;
   color: #fff;
@@ -184,6 +189,33 @@ body {
 
 .logout-link {
   color: #4e3618;
+}
+
+.field {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.actions {
+  text-align: center;
 }
 
 /* トップページのリンク */
@@ -350,31 +382,6 @@ body {
   font-size: 28px;
 }
 
-  .field {
-    margin-bottom: 20px;
-  }
-  
-  label {
-    display: block;
-    font-size: 16px;
-    margin-bottom: 5px;
-  }
-  
-  input[type="email"],
-  input[type="password"] {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-  }
-  
-  .actions {
-    text-align: center;
-  }
 
  /* 詳細ページ */
   .show-hed{

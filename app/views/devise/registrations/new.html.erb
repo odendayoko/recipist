@@ -4,12 +4,12 @@
     <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>     
       <%= render "devise/shared/error_messages", resource: resource %>
       <div class="field">
-        <%= f.label :nickname, 'ニックネーム' %><br />
+        <%= f.label :nickname, 'ニックネーム' %><br/>
         <%= f.text_field :nickname, autofocus: true %>
       </div>
 
       <div class="field">
-        <%= f.label :email, 'メールアドレス'%><br />
+        <%= f.label :email, 'メールアドレス'%><br/>
         <%= f.email_field :email %>
       </div>
 
@@ -22,7 +22,7 @@
       </div>
 
       <div class="field">
-        <%= f.label :password_confirmation, 'パスワード確認' %><br />
+        <%= f.label :password_confirmation, 'パスワード確認' %><br/>
         <%= f.password_field :password_confirmation, autocomplete: "off" %>
       </div>
 
