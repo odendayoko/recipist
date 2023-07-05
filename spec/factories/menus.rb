@@ -1,8 +1,8 @@
 FactoryBot.define do
   factory :menu do
-    name              {'hoge'}
-    url               {'example.com'}
-    memo              {'hogehoge'}
-    user_id           {@user}
+    name              {Faker::Lorem.sentence}
+    url               {Faker::Lorem.sentence}
+    memo              {Faker::Lorem.sentence}
+    association :user
   end
 end
