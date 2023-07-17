@@ -27,10 +27,9 @@ class UsersController < ApplicationController
   def search
     if params[:keyword].present?
       @users = User.where('nickname LIKE ?', "%#{params[:keyword]}%")
+      @users = nil if @users.empty?
     else
-      @users = nil
+      @users = []
     end
   end
-
-
 end
