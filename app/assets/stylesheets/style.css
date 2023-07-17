@@ -116,7 +116,6 @@ body {
 /* 検索フォーム */
 .search-form {
   background-color:#fff;
-  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -127,7 +126,7 @@ body {
   background-color: transparent;
   border: solid 1px #26753e;
   font-size: 16px;
-  padding: 4px;
+  padding: 8px;
   margin-right: 13px;
   width: 55%;
   border-radius: 4px;
@@ -143,7 +142,6 @@ body {
   border-radius: 10px;
   width: 70px;
 }
-
 
 /* ナビゲーション */
 .header-nav {
@@ -201,9 +199,7 @@ label {
   margin-bottom: 5px;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
+.registration_field, .session_field{
   display: block;
   width: 100%;
   padding: 10px;
@@ -239,7 +235,6 @@ input[type="password"] {
  .link:hover{
   border-bottom: 3px solid #bc611e;
  }
-
 
 .index-recipe {
   max-width: 400px;
@@ -532,8 +527,8 @@ input[type="password"] {
   width: 100%;
   max-height: 100%;
 }
+
 .welcome-registration-button {
-  display:inline-block;
   display: block;
   background-color: #ea5550;
   border: none;

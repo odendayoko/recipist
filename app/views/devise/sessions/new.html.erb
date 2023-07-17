@@ -4,12 +4,12 @@
     <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
       <div class="field">
         <%= f.label :email, 'メールアドレス' %><br />
-        <%= f.email_field :email, autofocus: true %>
+        <%= f.email_field :email, autofocus: true, class: 'session_field' %>
       </div>
 
       <div class="field">
         <%= f.label :password, 'パスワード' %><br />
-        <%= f.password_field :password, autocomplete: "off" %>
+        <%= f.password_field :password, autocomplete: "off", class: 'session_field' %>
       </div>
 
       <% if devise_mapping.rememberable? %>
