@@ -59,17 +59,6 @@ body {
   width: 70px;
 }
 
-/* .header-registration-button{
-  background-color: #ea5550;
-  border: none;
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 8px 16px;
-  border-radius: 10px;
-  width: 70px;
-} */
-
 .post {
   color:#4e3618;
   display: block;
@@ -488,8 +477,48 @@ label {
 }
 
 /* ユーザーサーチページ */
-.user-search-user {
-  margin: 10px
+.user-search-content {
+  margin: 10px;
+  border-bottom: 0.5px solid #4e3618;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.user-search-name {
+ line-height: 56px;
+ color: #4e3618;
+}
+
+.unfollow-button {
+  font-size: 14px;
+  background-color: #4e3618;
+  border: none;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 10px;
+  margin: 10px 0;
+  width: 130px;
+  text-align: center;
+  line-height: 24px;
+}
+
+.follow-button {
+  font-size: 14px;
+  border: solid 1px;
+  color: #4e3618;
+  padding: 6px 12px;
+  border-radius: 10px;
+  margin: 10px 0px;
+  width: 130px;
+  text-align: center;
+  line-height: 24px;
+}
+
+.user-search-text {
+  color: #4e3618;
+  text-align: center;
+  padding: 15px;
 }
 
 /* マイページ */
