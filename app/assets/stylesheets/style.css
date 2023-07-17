@@ -533,6 +533,7 @@ input[type="password"] {
   max-height: 100%;
 }
 .welcome-registration-button {
+  display:inline-block;
   display: block;
   background-color: #ea5550;
   border: none;
