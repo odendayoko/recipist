@@ -521,6 +521,19 @@ label {
   padding: 15px;
 }
 
+/* ユーザー詳細ページ */
+.user-show-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom:15px;
+}
+
+.user-show-name {
+  color: #4e3618;
+  font-size: 36px;
+}
+
 /* マイページ */
 .follow-content {
   display: flex;
