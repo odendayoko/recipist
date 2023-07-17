@@ -1,17 +1,27 @@
-
 <div class="container">
   <%= form_with(url: search_users_path, local: true, method: :get, class: "search-form") do |form| %>
-    <%= form.text_field :keyword, placeholder: "ユーザーを検索する", class: "search-input" %>
+    <%= form.text_field :keyword, placeholder: "ユーザーを検索", class: "search-input" %>
     <%= form.submit "検索", class: "search-button" %>
   <% end %>
 
   <div class="user-search-contents">
-    <% @users.each do |user| %>
-      <% if @users%>
-        <div class="user-search-user">
-            <%= link_to "#{user.nickname}", "/users/#{user.id}",class: "post"%>
-        </div>
+    <% if @users %>
+      <% @users.each do |user| %>
+          <div class="user-search-content">
+            <%= link_to "#{user.nickname}", "/users/#{user.id}",class: 'user-search-name'%>
+            <% if current_user != user %>
+              <% if current_user.following?(user) %>
+                <%= link_to 'フォロー中', user_relationships_path(user.id), method: :delete, class: "unfollow-button" %>
+              <% else %>
+              <%= link_to 'フォローする', user_relationships_path(user.id), method: :POST, class:"follow-button" %>
+              <% end %>
+            <% end %>
+          </div>
       <% end %>
+    <% else %>
+      <p class="user-search-text">
+        <%= "ユーザーが見つかりませんでした" %>
+      </p>
     <% end %>
   </div>
 </div>
