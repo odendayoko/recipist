@@ -6,9 +6,7 @@ class FavoritesController < ApplicationController
     if user_signed_in?
       favorite = current_user.favorites.build(menu_id: params[:menu_id])
       favorite.save
-   
       render 'create.js.erb'
-   
     end
   end
 
