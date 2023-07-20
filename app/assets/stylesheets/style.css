@@ -270,19 +270,25 @@ label {
   color:#ea5550;
 }
 
-.index-recipe-url {
+.index-recipe-link {
   font-size: 14px;
   color:#4e3618;
   text-align: center;
   width: 100%;
 }
 
-.index-recipe-url a {
+.index-recipe-link a {
   color:#4e3618; 
 }
 
 .fa-solid.fa-utensils{
   color: #fff;
+}
+
+.favorite-recipe-user {
+  font-size: 14px;
+  color:#4e3618;
+  padding-bottom: 5px;
 }
 
 /* 新規投稿ボタン */

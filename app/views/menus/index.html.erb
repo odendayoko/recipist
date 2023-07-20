@@ -13,8 +13,10 @@
           <div class="index-recipe-name">
             <%= link_to "#{menu.name}" , menu_path(menu.id)%>
           </div>
-          <div class="index-recipe-url">
-            <%= link_to "#{menu.url}", menu.url, target: "_blank"%>
+          <div class="index-recipe-link">
+            <%= link_to menu.url, target: "_blank" do %>
+              <i class="fa-solid fa-up-right-from-square"></i>  レシピを見る
+            <% end %>
           </div>
         </div>
       <% end %>
