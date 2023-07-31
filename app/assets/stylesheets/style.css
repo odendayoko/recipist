@@ -384,84 +384,100 @@ label {
 }
 
 
- /* 詳細ページ */
-  .show-hed{
-    display: flex;
-    justify-content: space-between; 
-    padding: 5px;
-  }
+/* 詳細ページ */
+.show-hed{
+  display: flex;
+  justify-content: space-between; 
+  padding: 5px;
+}
 
-  .show-back-button{
-    align-items: center;
-    justify-content: center;
-    display: flex;
+.show-back-button{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
 
-  }
+.fa-chevron-left{
+  color: #26753e;
+  font-size: 20px;
+}
 
-  .fa-chevron-left{
-    color: #26753e;
-    font-size: 20px;
+.show-edit-button {
+  border-radius: 5px; 
+  padding: 5px 10px;
+  text-align: center;
+  background-color: #26753e;
+}
 
-  }
-  
-  .show-recipe-name {
-    color:#4e3618;
-    padding: 15px;
-  }
+.show-edit-button a {
+  color: #fff;
+}
 
-  .show-edit-button a{
-    color: #26753e;
-  }
-  
-  .show-edit-button {
-    border-radius: 5px; 
-    padding: 5px;
-    text-align: center;
-    border: solid 1px #26753e;
-  }
+.show-recipe-name {
+  padding: 15px;
+  color: #4e3618;
+  text-align: center;
+  font-size: 23px;
+  font-weight: bolder;
+}
 
-  .show-recipe-image{
-    padding: 15px;
-    max-width: 100%;
-    height: auto;
-  }
+.show-recipe-image{
+  padding: 15px;
+  max-width: 100%;
+  height: auto;
+}
 
-  .show-recipe-image img{
-    width: 100%;
-    height: 300px;
-    object-fit: contain;
-  }
+.show-recipe-image img{
+  width: 100%;
+  height: 350px;
+  object-fit: contain;
+}
 
-  .show-recipe-list {
-    padding: 15px;
-    color: #4e3618;
-  }
+.show-recipe-link {
+  padding: 15px;
+  color: #4e3618;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .show-recipe-list h3 {
-    color: #4e3618;
-    padding-bottom: 10px;
-  }
+.show-recipe-list {
+  padding: 15px;
+  color: #4e3618;
+}
 
-  .show-recipe-url:hover {
-    text-decoration: underline;
-   }
+.show-recipe-list h3 {
+  color: #4e3618;
+  padding-bottom: 10px;
+}
 
-  .show-recipe-url {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+.show-recipe-link-button {
+  display: inline-block; 
+  border: solid 1px #4e3618;
+  border-radius: 5px; 
+  padding: 5px 115px; 
+  color: #4e3618;
+}
 
-  .show-recipe-url a{
-    color: #4e3618;
-  }
 
-  .show-recipe-memo{
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    word-break: break-all;
-  }
+.show-recipe-link-button:hover {
+  background-color: #ccc;
+}
+.link-icon {
+  display: flex;
+  align-items: center;
+}
 
+.link-icon i{
+  margin-right: 5px;
+}
+
+
+.show-recipe-memo{
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-all;
+}
 
 .show-bar{
   display: flex;

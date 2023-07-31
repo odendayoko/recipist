@@ -19,10 +19,11 @@
     <% end %>
   </div>
 
-  <h2><%= @menu.name %></h2>
+  <div class="show-recipe-name">
+    <%= @menu.name %>
+  </div>
 
   <div class= "show-bar">
-  
     <div class= "like-container">
       <div id="favorite-button<%= @menu.id %>">
         <%= render partial: "favorites/favorite", locals: {menu: @menu}%>
@@ -42,13 +43,14 @@
   <div class="show-recipe-image">
     <%= image_tag @menu.image if @menu.image.attached? %>
   </div>
-
-  <div class = "show-recipe-list">
-    <h3><%="レシピのURL"%></h3>
-    <div class= 'show-recipe-url'>
-    <%= link_to @menu.url, @menu.url ,target: '_blank' %>
-    </div>
- </div>
+  
+  <div class = "show-recipe-link">
+    <%= link_to @menu.url, target: "_blank",class: 'show-recipe-link-button' do %>
+      <div class="link-icon">
+        <i class="fa-solid fa-up-right-from-square"></i>レシピを見る
+      </div>
+    <% end %>
+  </div>
 
   <div class = "show-recipe-list">
     <h3><%="メモ"%></h3>
