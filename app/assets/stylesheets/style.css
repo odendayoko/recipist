@@ -413,8 +413,12 @@ label {
   color: #fff;
 }
 
+.show-recipe-main-container {
+  margin: 0 15px;
+  
+}
 .show-recipe-name {
-  padding: 15px;
+  padding: 15px 0;
   color: #4e3618;
   text-align: center;
   font-size: 23px;
@@ -434,15 +438,18 @@ label {
 }
 
 .show-recipe-link {
-  padding: 15px;
   color: #4e3618;
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 420px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 15px;
 }
 
 .show-recipe-list {
-  padding: 15px;
+  padding: 30px 0;
   color: #4e3618;
 }
 
@@ -455,14 +462,15 @@ label {
   display: inline-block; 
   border: solid 1px #4e3618;
   border-radius: 5px; 
-  padding: 5px 27%; 
+  padding: 5px 33%; 
   color: #4e3618;
+  white-space: nowrap; 
 }
-
 
 .show-recipe-link-button:hover {
   background-color: #ccc;
 }
+
 .link-icon {
   display: flex;
   align-items: center;
@@ -471,7 +479,6 @@ label {
 .link-icon i{
   margin-right: 5px;
 }
-
 
 .show-recipe-memo{
   overflow-wrap: break-word;

@@ -1,6 +1,5 @@
 <% if @menu.image.attached? %>
   <% set_meta_tags title: @menu.name, description: @menu.memo,twitter:{image: image_url(@menu.image.attachment.service.send(:object_for,@menu.image.key).public_url)} %>
-  <%# <% set_meta_tags twitter: {image: image_url(url_for(@menu.image))}%>  
 <% end %>
 
 <div class="container">
@@ -19,6 +18,8 @@
     <% end %>
   </div>
 
+
+<div class="show-recipe-main-container">
   <div class="show-recipe-name">
     <%= @menu.name %>
   </div>
@@ -39,26 +40,28 @@
       <% end%>
     </div>
   </div>
-
+  
   <div class="show-recipe-image">
     <%= image_tag @menu.image if @menu.image.attached? %>
   </div>
   
-  <div class = "show-recipe-link">
-    <%= link_to @menu.url, target: "_blank",class: 'show-recipe-link-button' do %>
-      <div class="link-icon">
-        <i class="fa-solid fa-up-right-from-square"></i>レシピを見る
-      </div>
-    <% end %>
-  </div>
+  <div class="show-recipe-contents">
+    <div class = "show-recipe-link">
+      <%= link_to @menu.url, target: "_blank",class: 'show-recipe-link-button' do %>
+        <div class="link-icon">
+          <i class="fa-solid fa-up-right-from-square"></i>レシピを見る
+        </div>
+      <% end %>
+    </div>
 
-  <div class = "show-recipe-list">
-    <h3><%="メモ"%></h3>
-    <div class='show-recipe-memo'>
-    <%= @menu.memo %>
+    <div class = "show-recipe-list">
+      <h3><%="メモ"%></h3>
+      <div class='show-recipe-memo'>
+        <%= @menu.memo %>
+      </div>
     </div>
   </div>
-
+</div>
 </div>
 
 
